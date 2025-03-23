@@ -6,4 +6,5 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: "/porto-react/",
   plugins: [react(), tailwindcss()],
+  assetsInclude: ["**/*.glb"],
 });

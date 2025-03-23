@@ -4,36 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="public/style/style.css" />
-    <link rel="stylesheet" href="public/output.css" />
     <title>Satriyo Rizkyansah | Porto</title>
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .lanyard-wrapper {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(1);
+        transform-origin: center;
+      }
+    </style>
   </head>
-  <body class="md:w-[70%] lg:w-[60%] 2xl:w-[50%] m-auto">
-    <div class="">
-      <div id="root"></div>
-    </div>
-
+  <body class="sm:w-[80%] md:w-[70%] lg:w-[60%] 2xl:w-[50%] mx-auto p-3">
+    <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <!-- <script src="public/js/script.js"></script> -->
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script>
-      var app = document.getElementById("app");
-
-      var typewriter = new Typewriter(app, {
-        loop: false,
-        delay: 75,
-      });
-
-      typewriter
-        .pauseFor(500)
-        .typeString("You've found a small part of me on the internet. <br>")
-        .pauseFor(800)
-        // .deleteChars(10)
-        .typeString(" Thank you for taking the time to look around <span style='color: #DE3163;'>❤️</span>")
-        // .typeString('<strong>only <span style="color: #27ae60;">5kb</span> Gzipped!</strong>')
-        .pauseFor(1000)
-        .start();
-      8;
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
   </body>
 </html>

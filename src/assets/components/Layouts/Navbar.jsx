@@ -1,63 +1,83 @@
-import { useEffect, useState } from "react";
-
+import Lanyard from "../Fragments/lanyard";
 const Navbar = () => {
-  const [isFixed, setIsFixed] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  // Navbar Fixed on Scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsFixed(true);
-      } else {
-        setIsFixed(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div className="md:w-[70%] lg:w-[60%] 2xl:w-[50%] m-auto">
-      <header className={`${isFixed ? "fixed top-0 left-0 w-full shadow-md z-50 bg-white" : "bg-transparent absolute top-0 left-0 w-full"} flex items-center lg:text-sm transition-all duration-300 ease-in-out`}>
-        <div className="container font-mono">
-          <div className="flex items-center justify-between relative">
-            <div className="w-14 h-14">
-              <a href="https://github.com/SatriyoRizkyansah" target="_blank" rel="noopener noreferrer" className="font-bold text-primary text-lg block pt-6">
-                <img src="img/logo/me-2.png" alt="Satriyo Rizkyansah" className="-mt-4 rounded-full" width="40" style={{ border: "#79944f solid 3px" }} />
-              </a>
-            </div>
+    <header class="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm font-mono">
+      {/* <div className="max-w-7xl mx-auto px-4"></div>
+       */}
 
-            <div className="flex items-center px-4">
-              {/* Hamburger Button */}
-              <button type="button" className="block absolute right-4 lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-                <span className={`hamburger-line transition duration-300 ease-in-out origin-top-left ${menuOpen ? "rotate-45 translate-y-1" : ""}`}></span>
-                <span className={`hamburger-line transition duration-300 ease-in-out ${menuOpen ? "opacity-0" : ""}`}></span>
-                <span className={`hamburger-line transition duration-300 ease-in-out origin-bottom-left ${menuOpen ? "-rotate-45 -translate-y-1" : ""}`}></span>
-              </button>
+      <nav class="mt-4 relative max-w-2xl w-full bg-white border border-gray-200 rounded-[2rem] mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-neutral-800 dark:border-neutral-700">
+        <div class="px-4 md:px-0 flex justify-between items-center">
+          {/* <!-- Logo --> */}
+          <div>
+            <img src="https://raw.githubusercontent.com/innng/innng/master/assets/kyubey.gif" alt="hehe" style={{ height: "30px" }} />
+          </div>
+          {/* <!-- End Logo --> */}
 
-              {/* Nav Menu */}
-              <nav
-                className={`absolute py-4 bg-white shadow-lg rounded-lg max-w-[200px] w-full right-4 top-full transition-all duration-300 ease-in-out ${
-                  menuOpen ? "block" : "hidden"
-                } lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none`}
+          <div class="md:hidden">
+            {/* <!-- Toggle Button --> */}
+            <button
+              type="button"
+              class="hs-collapse-toggle flex justify-center items-center size-6 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              id="hs-navbar-header-floating-collapse"
+              aria-expanded="false"
+              aria-controls="hs-navbar-header-floating"
+              aria-label="Toggle navigation"
+              data-hs-collapse="#hs-navbar-header-floating"
+            >
+              <svg
+                class="hs-collapse-open:hidden shrink-0 size-3.5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-                <ul className="block lg:flex">
-                  {["Home", "About", "Project", "Education", "Blog", "Contact"].map((item) => (
-                    <li key={item} className="group mb-3">
-                      <a href={item === "Home" ? "#" : `#${item.toLowerCase()}`} className="text-base text-dark mx-8 group-hover:text-primary">
-                        {item}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
+                <line x1="3" x2="21" y1="6" y2="6" />
+                <line x1="3" x2="21" y1="12" y2="12" />
+                <line x1="3" x2="21" y1="18" y2="18" />
+              </svg>
+              <svg
+                class="hs-collapse-open:block hidden shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+            {/* <!-- End Toggle Button --> */}
           </div>
         </div>
-      </header>
-    </div>
+
+        <div id="hs-navbar-header-floating" class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-header-floating-collapse">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
+            <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200" href="#" aria-current="page">
+              Home
+            </a>
+            <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#">
+              Projects
+            </a>
+            <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#">
+              Work
+            </a>
+            <a class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#">
+              Articles
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 };
 
