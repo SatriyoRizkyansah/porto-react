@@ -1,4 +1,3 @@
-import Lanyard from "../Fragments/lanyard";
 const Navbar = () => {
   return (
     <header class="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm font-mono">
