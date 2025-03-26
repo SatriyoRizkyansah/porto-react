@@ -6,7 +6,7 @@ import { useGLTF, useTexture, Environment, Lightformer } from "@react-three/drei
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 
-import cardGLB from "../../../../public/lanyard/card.glb";
+import cardGLB from "../../../../public/lanyard/card1.glb";
 import lanyard from "../../../../public/lanyard/lanyard.png";
 
 import * as THREE from "three";
@@ -15,7 +15,7 @@ extend({ MeshLineGeometry, MeshLineMaterial });
 
 export default function Lanyard({ position = [0, 0, 20], gravity = [0, -40, 0], fov = 20, transparent = true }) {
   return (
-    <div className="fixed top-0 right-0 w-[300px] h-[50vw] sm:w-[300px] sm:h-[50vw] md:w-[400px] md:h-[80vw] flex justify-center items-center transform scale-100 origin-top-right">
+    <div className="fixed top-0 right-0 w-[300px] h-[50vw] sm:w-[200px] sm:h-[50vw] md:w-[400px] md:h-[50vw] xl:w-[500px] xl:h-[40vw] flex justify-center items-center transform scale-100 origin-top-right">
       <Canvas camera={{ position: position, fov: fov }} gl={{ alpha: transparent }} onCreated={({ gl }) => gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)}>
         <ambientLight intensity={Math.PI} />
         <Physics gravity={gravity} timeStep={1 / 60}>

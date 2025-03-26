@@ -1,0 +1,58 @@
+:root {
+  --primary: #79944f;
+  --secondary: #64748b;
+  --dark: #0f172a;
+
+  /* primary2 shades */
+  --primary2-50: #eff6ff;
+  --primary2-100: #dbeafe;
+  --primary2-200: #bfdbfe;
+  --primary2-300: #93c5fd;
+  --primary2-400: #60a5fa;
+  --primary2-500: #3b82f6;
+  --primary2-600: #2563eb;
+  --primary2-700: #1d4ed8;
+  --primary2-800: #1e40af;
+  --primary2-900: #1e3a8a;
+  --primary2-950: #172554;
+}
+
+.navbar-fixed {
+  position: fixed;
+  z-index: 9999;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-line {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 6px auto;
+  background-color: #333; /* Warna garis hamburger */
+}
+.hamburger-active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger-active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@layer components {
+  .container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (min-width: 1320px) {
+    .container {
+      max-width: 1320px;
+    }
+  }
+}
