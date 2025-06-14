@@ -24,7 +24,7 @@ export function HomeView() {
 
   return (
     <div className="container-fluid">
-      <div className="min-h-screen bg-blue-600 flex justify-center items-center">
+      <div className="min-h-screen bg-blue-600 flex justify-center items-center relative">
         <div className="relative flex flex-col items-center text-center">
           <div className="text-white mb-6">Hi Satriyo here</div>
 
@@ -32,7 +32,7 @@ export function HomeView() {
           <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold relative z-10">Fullstack</h1>
 
           {/* Gambar di tengah */}
-          <img src="src/assets/images/rio2.png" alt="Foto Rio" className="absolute top-1/2 left-1/2 w-48 sm:w-64 md:w-[35rem] -translate-x-1/2 -translate-y-1/2 z-20" />
+          <img src="src/assets/images/profil/rio2.png" alt="Foto Rio" className="absolute top-1/2 left-1/2 w-48 sm:w-64 md:w-[35rem] -translate-x-1/2 -translate-y-1/2 z-20" />
 
           {/* Web Developer - paling atas */}
           <h1 ref={textRef} className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold mt-6 relative z-30">
@@ -40,11 +40,12 @@ export function HomeView() {
           </h1>
         </div>
 
-        <div className="absolute bottom-4 right-4 flex gap-3 z-40">
-          <img src="src/assets/icons/laravel.svg" alt="Laravel" className="w-8 h-8 sm:w-10 sm:h-10" />
-          <img src="src/assets/icons/react.svg" alt="React" className="w-8 h-8 sm:w-10 sm:h-10" />
-          <img src="src/assets/icons/vue.svg" alt="Vue" className="w-8 h-8 sm:w-10 sm:h-10" />
-          <img src="src/assets/icons/typescript.svg" alt="TypeScript" className="w-8 h-8 sm:w-10 sm:h-10" />
+        {/* Logo - pojok kanan bawah */}
+        <div className="absolute bottom-6 right-6 flex gap-3 z-40">
+          <img src="src/assets/images/tech/11.png" alt="Laravel" className="w-3 h-3 sm:w-7 sm:h-7" />
+          <img src="src/assets/images/tech/11.png" alt="React" className="w-3 h-3 sm:w-7 sm:h-7" />
+          <img src="src/assets/images/tech/11.png" alt="Vue" className="w-3 h-3 sm:w-7 sm:h-7" />
+          <img src="src/assets/images/tech/11.png" alt="TypeScript" className="w-3 h-3 sm:w-7 sm:h-7" />
         </div>
       </div>
 
@@ -57,9 +58,6 @@ export function HomeView() {
       </svg>
 
       <div className="min-h-screen bg-white flex items-center justify-center">
-        {/* <div style={{ height: "600px", position: "relative" }}>
-          <Folder size={2} color="#5227FF" className="custom-folder" />
-        </div> */}
         <ScrollFloat animationDuration={1} ease="back.inOut(2)" scrollStart="center bottom+=50%" scrollEnd="bottom bottom-=40%" stagger={0.03}>
           reactbits
         </ScrollFloat>
