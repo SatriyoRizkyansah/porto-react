@@ -26,7 +26,8 @@ export function HomeView() {
     <div className="container-fluid">
       <div className="min-h-screen bg-blue-600 flex justify-center items-center relative">
         <div className="relative flex flex-col items-center text-center">
-          <div className="text-white mb-6">Hi Satriyo here</div>
+          {/* Teks di atas foto */}
+          <p className="absolute -top-30 text-white">Hey, I'm Rio — a Software Developer at Sasmita Jaya.</p>
 
           {/* Fullstack - paling bawah */}
           <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold relative z-10">Fullstack</h1>
@@ -38,22 +39,23 @@ export function HomeView() {
           <h1 ref={textRef} className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold mt-6 relative z-30">
             Web Developer
           </h1>
+          <div className="absolute -bottom-25 right-6 flex gap-1 z-40">
+            <img src="src/assets/images/tech/laravel.svg" alt="Laravel" className="w-5 h-5 sm:w-10 sm:h-10" />
+            <img src="src/assets/images/tech/react.svg" alt="Laravel" className="w-5 h-5 sm:w-10 sm:h-10" />
+            <img src="src/assets/images/tech/vue.svg" alt="Laravel" className="w-5 h-5 sm:w-10 sm:h-10" />
+            <img src="src/assets/images/tech/github.svg" alt="Laravel" className="w-5 h-5 sm:w-10 sm:h-10" />
+            <img src="src/assets/images/tech/gitlab.svg" alt="Laravel" className="w-5 h-5 sm:w-10 sm:h-10" />
+          </div>
         </div>
 
         {/* Logo - pojok kanan bawah */}
-        <div className="absolute bottom-6 right-6 flex gap-3 z-40">
-          <img src="src/assets/images/tech/11.png" alt="Laravel" className="w-3 h-3 sm:w-7 sm:h-7" />
-          <img src="src/assets/images/tech/11.png" alt="React" className="w-3 h-3 sm:w-7 sm:h-7" />
-          <img src="src/assets/images/tech/11.png" alt="Vue" className="w-3 h-3 sm:w-7 sm:h-7" />
-          <img src="src/assets/images/tech/11.png" alt="TypeScript" className="w-3 h-3 sm:w-7 sm:h-7" />
-        </div>
       </div>
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#0069ff"
+          fill="#145efc"
           fill-opacity="1"
-          d="M0,288L30,256C60,224,120,160,180,144C240,128,300,160,360,160C420,160,480,128,540,144C600,160,660,224,720,250.7C780,277,840,267,900,224C960,181,1020,107,1080,112C1140,117,1200,203,1260,245.3C1320,288,1380,288,1410,288L1440,288L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+          d="M0,224L48,234.7C96,245,192,267,288,256C384,245,480,203,576,160C672,117,768,75,864,96C960,117,1056,203,1152,213.3C1248,224,1344,160,1392,128L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
         ></path>
       </svg>
 
