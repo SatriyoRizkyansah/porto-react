@@ -24,25 +24,33 @@ export function HomeView() {
 
   return (
     <div className="container-fluid">
-      <div className="min-h-screen bg-blue-600 flex items-center justify-center">
-        <div className="relative flex flex-col items-center pt-24 sm:pt-32 ">
-          <div className="text-white mb-6 text-center ">Hi Satriyo here</div>
+      <div className="min-h-screen bg-blue-600 flex justify-center items-center">
+        <div className="relative flex flex-col items-center text-center">
+          <div className="text-white mb-6">Hi Satriyo here</div>
 
           {/* Fullstack - paling bawah */}
-          <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold text-center relative z-10">Fullstack</h1>
+          <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold relative z-10">Fullstack</h1>
 
           {/* Gambar di tengah */}
-          <img src="src/assets/images/rio2.png" alt="Foto Rio" className="absolute top-[60%] sm:top-[58%] md:top-[80%] left-1/2 w-48 sm:w-64 md:w-[35rem] -translate-x-1/2 -translate-y-1/2 z-20" />
+          <img src="src/assets/images/rio2.png" alt="Foto Rio" className="absolute top-1/2 left-1/2 w-48 sm:w-64 md:w-[35rem] -translate-x-1/2 -translate-y-1/2 z-20" />
 
           {/* Web Developer - paling atas */}
-          <h1 ref={textRef} className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold text-center mt-6 relative z-30">
+          <h1 ref={textRef} className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold mt-6 relative z-30">
             Web Developer
           </h1>
         </div>
+
+        <div className="absolute bottom-4 right-4 flex gap-3 z-40">
+          <img src="src/assets/icons/laravel.svg" alt="Laravel" className="w-8 h-8 sm:w-10 sm:h-10" />
+          <img src="src/assets/icons/react.svg" alt="React" className="w-8 h-8 sm:w-10 sm:h-10" />
+          <img src="src/assets/icons/vue.svg" alt="Vue" className="w-8 h-8 sm:w-10 sm:h-10" />
+          <img src="src/assets/icons/typescript.svg" alt="TypeScript" className="w-8 h-8 sm:w-10 sm:h-10" />
+        </div>
       </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#1d4ed8"
+          fill="#0069ff"
           fill-opacity="1"
           d="M0,288L30,256C60,224,120,160,180,144C240,128,300,160,360,160C420,160,480,128,540,144C600,160,660,224,720,250.7C780,277,840,267,900,224C960,181,1020,107,1080,112C1140,117,1200,203,1260,245.3C1320,288,1380,288,1410,288L1440,288L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
         ></path>
