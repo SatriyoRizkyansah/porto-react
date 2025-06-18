@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import SplitText from "gsap/SplitText";
 import Folder from "../../../components/folder/folder";
 import ScrollFloat from "../../../components/text-animation/scroll-float";
+import Carousel from "../../../components/carousel/carousel";
 
 gsap.registerPlugin(SplitText);
 
@@ -24,10 +25,10 @@ export function HomeView() {
 
   return (
     <div className="container-fluid">
-      <div className="min-h-screen bg-blue-600 flex justify-center items-center relative">
+      <div className="min-h-screen bg-blue-600 flex justify-center items-center">
         <div className="relative flex flex-col items-center text-center">
           {/* Teks di atas foto */}
-          <p className="absolute -top-30 text-white">Hey, I'm Rio — a Software Developer at Sasmita Jaya.</p>
+          <p className="absolute -top-30 text-white">🙋‍♂️Hey, I'm Rio — a Software Developer at Sasmita Jaya.</p>
 
           {/* Fullstack - paling bawah */}
           <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold relative z-10">Fullstack</h1>
@@ -59,10 +60,26 @@ export function HomeView() {
         ></path>
       </svg>
 
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen w-1/2 m-auto bg-white flex items-center justify-center">
         <ScrollFloat animationDuration={1} ease="back.inOut(2)" scrollStart="center bottom+=50%" scrollEnd="bottom bottom-=40%" stagger={0.03}>
-          reactbits
+          I keep things simple, reliable, and solve problems — that’s what I do.
         </ScrollFloat>
+      </div>
+      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#145efc"
+          fill-opacity="1"
+          d="M0,128L48,154.7C96,181,192,235,288,240C384,245,480,203,576,154.7C672,107,768,53,864,48C960,43,1056,85,1152,90.7C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,
+          
+          960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg> */}
+
+      <div className="min-h-screen bg-blue-600 flex justify-center items-center">
+        {/* <div className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, corrupti.</div> */}
+        <div style={{ height: "100", position: "relative" }}>
+          <Carousel baseWidth={1000} autoplay={true} autoplayDelay={90000} pauseOnHover={true} loop={true} round={false} />
+        </div>
       </div>
     </div>
   );
