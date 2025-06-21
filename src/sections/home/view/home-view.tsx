@@ -65,21 +65,25 @@ export function HomeView() {
           I keep things simple, reliable, and solve problems — that’s what I do.
         </ScrollFloat>
       </div>
-      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#145efc"
           fill-opacity="1"
-          d="M0,128L48,154.7C96,181,192,235,288,240C384,245,480,203,576,154.7C672,107,768,53,864,48C960,43,1056,85,1152,90.7C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,
-          
-          960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
-      </svg> */}
+      </svg>
 
       <div className="min-h-screen bg-blue-600 flex justify-center items-center">
         {/* <div className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, corrupti.</div> */}
-        <div style={{ height: "100", position: "relative" }}>
+        <div style={{ height: "100", position: "relative" }} className="">
           <Carousel baseWidth={1000} autoplay={true} autoplayDelay={90000} pauseOnHover={true} loop={true} round={false} />
         </div>
+      </div>
+
+      <div className="min-h-screen  m-auto bg-blue-600 flex items-center justify-center text-white">
+        <ScrollFloat animationDuration={1} ease="back.inOut(2)" scrollStart="center bottom+=50%" scrollEnd="bottom bottom-=40%" stagger={0.03}>
+          Thank You.
+        </ScrollFloat>
       </div>
     </div>
   );

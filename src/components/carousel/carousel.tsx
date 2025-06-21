@@ -28,32 +28,34 @@ const DEFAULT_ITEMS: CarouselItem[] = [
     description: "Cool text animations for your projects.",
     id: 1,
     icon: <FiFileText className="h-[16px] w-[16px] text-white" />,
-    image: "src/assets/images/projects/unpam-profile.png",
+    image: "src/assets/images/projects/unpamprofile.png",
   },
   {
-    title: "Animations",
+    title: "KAWA AI",
     description: "Smooth animations for your projects.",
     id: 2,
     icon: <FiCircle className="h-[16px] w-[16px] text-white" />,
+    image: "src/assets/images/projects/kawaai.png",
   },
   {
-    title: "Components",
+    title: "Posyandu Health System",
     description: "Reusable components for your projects.",
     id: 3,
     icon: <FiLayers className="h-[16px] w-[16px] text-white" />,
+    image: "src/assets/images/projects/kawaai.png",
   },
-  {
-    title: "Backgrounds",
-    description: "Beautiful backgrounds and patterns for your projects.",
-    id: 4,
-    icon: <FiLayout className="h-[16px] w-[16px] text-white" />,
-  },
-  {
-    title: "Common UI",
-    description: "Common UI components are coming soon!",
-    id: 5,
-    icon: <FiCode className="h-[16px] w-[16px] text-white" />,
-  },
+  // {
+  //   title: "Backgrounds",
+  //   description: "Beautiful backgrounds and patterns for your projects.",
+  //   id: 4,
+  //   icon: <FiLayout className="h-[16px] w-[16px] text-white" />,
+  // },
+  // {
+  //   title: "Common UI",
+  //   description: "Common UI components are coming soon!",
+  //   id: 5,
+  //   icon: <FiCode className="h-[16px] w-[16px] text-white" />,
+  // },
 ];
 
 const DRAG_BUFFER = 0;
@@ -148,7 +150,7 @@ export default function Carousel({ items = DEFAULT_ITEMS, baseWidth = 300, autop
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden p-4 ${round ? "rounded-full border border-white" : "rounded-[24px] border border-[#222] "}`}
+      className={`relative overflow-hidden p-4 ${round ? "rounded-full border border-white" : "rounded-[24px] border border-[#fff] "}`}
       style={{
         width: `${baseWidth}px`,
         ...(round && { height: `${baseWidth}px` }),
