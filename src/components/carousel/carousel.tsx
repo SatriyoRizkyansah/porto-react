@@ -42,7 +42,7 @@ const DEFAULT_ITEMS: CarouselItem[] = [
     description: "Reusable components for your projects.",
     id: 3,
     icon: <FiLayers className="h-[16px] w-[16px] text-white" />,
-    image: "src/assets/images/projects/kawaai.png",
+    image: "src/assets/images/projects/posyandu.png",
   },
   // {
   //   title: "Backgrounds",
