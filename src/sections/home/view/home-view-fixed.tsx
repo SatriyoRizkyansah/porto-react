@@ -35,8 +35,8 @@ export function HomeView() {
         scrollTrigger: {
           trigger: middleTextRef.current,
           start: "top 80%",
-          toggleActions: "play none none reverse"
-        }
+          toggleActions: "play none none reverse",
+        },
       });
     }
 
@@ -52,8 +52,8 @@ export function HomeView() {
         scrollTrigger: {
           trigger: thankYouTextRef.current,
           start: "top 80%",
-          toggleActions: "play none none reverse"
-        }
+          toggleActions: "play none none reverse",
+        },
       });
     }
   }, []);
