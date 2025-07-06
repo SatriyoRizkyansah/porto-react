@@ -10,6 +10,7 @@ export function HomeView() {
   const textRef = useRef<HTMLHeadingElement | null>(null);
   const middleTextRef = useRef<HTMLHeadingElement | null>(null);
   const thankYouTextRef = useRef<HTMLHeadingElement | null>(null);
+  const experienceRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     if (textRef.current) {
@@ -39,6 +40,24 @@ export function HomeView() {
         },
       });
     }
+
+    // Animasi untuk experience cards
+    experienceRefs.current.forEach((ref, index) => {
+      if (ref) {
+        gsap.from(ref, {
+          opacity: 0,
+          y: 50,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ref,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+          delay: index * 0.2,
+        });
+      }
+    });
 
     // Animasi untuk Thank You
     if (thankYouTextRef.current) {
@@ -136,6 +155,89 @@ export function HomeView() {
           {/* Extra large screens: baseWidth 1000 */}
           <div className="hidden xl:block">
             <Carousel baseWidth={1000} autoplay={true} autoplayDelay={90000} pauseOnHover={true} loop={true} round={false} />
+          </div>
+        </div>
+      </div>
+
+      {/* Experience Section */}
+      <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          {/* Section Title */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">My Journey</h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          </div>
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* Vertical Line */}
+            <div className="absolute left-1/2 transform -translate-x-0.5 w-1 h-full bg-blue-200"></div>
+
+            {/* Experience Items */}
+            <div className="space-y-16">
+              {/* 1. Freelancer */}
+              <div
+                ref={(el) => {
+                  experienceRefs.current[0] = el;
+                }}
+                className="relative flex flex-col md:flex-row items-center"
+              >
+                <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0 text-center md:text-right">
+                  <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Freelancer</h3>
+                    <div className="text-blue-600 font-semibold mb-3">2023 - Present</div>
+                    <p className="text-gray-600 leading-relaxed">[Deskripsi pengalaman freelance Anda - silakan ganti dengan cerita Anda sendiri]</p>
+                  </div>
+                </div>
+
+                {/* Timeline Dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+
+                <div className="md:w-1/2 md:pl-8"></div>
+              </div>
+
+              {/* 2. Magang Filkom */}
+              <div
+                ref={(el) => {
+                  experienceRefs.current[1] = el;
+                }}
+                className="relative flex flex-col md:flex-row items-center"
+              >
+                <div className="md:w-1/2 md:pr-8"></div>
+
+                {/* Timeline Dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+
+                <div className="md:w-1/2 md:pl-8 mb-8 md:mb-0 text-center md:text-left">
+                  <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Magang Filkom</h3>
+                    <div className="text-blue-600 font-semibold mb-3">2022 - 2023</div>
+                    <p className="text-gray-600 leading-relaxed">[Deskripsi pengalaman magang di Filkom - silakan ganti dengan cerita Anda sendiri]</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 3. LPTI Unpam */}
+              <div
+                ref={(el) => {
+                  experienceRefs.current[2] = el;
+                }}
+                className="relative flex flex-col md:flex-row items-center"
+              >
+                <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0 text-center md:text-right">
+                  <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">LPTI Unpam</h3>
+                    <div className="text-blue-600 font-semibold mb-3">2021 - 2022</div>
+                    <p className="text-gray-600 leading-relaxed">[Deskripsi pengalaman di LPTI Unpam - silakan ganti dengan cerita Anda sendiri]</p>
+                  </div>
+                </div>
+
+                {/* Timeline Dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+
+                <div className="md:w-1/2 md:pl-8"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
